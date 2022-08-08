@@ -21,12 +21,12 @@ use App\Diferenciai;
 
 Route::get('/', function () {
     $banners = Banner::orderBy('created_at', 'desc')->get();
-    $prices = Preco::orderBy('created_at','desc')->get();
-    $galerias = Galeria::orderBy('created_at', 'desc')->get();
-    $profissionais = Profissionai::orderBy('created_at', 'desc')->get();
-    $call_to_actions = CallToAction::orderBy('created_at', 'desc')->get();
-    $diferenciais = Diferenciai::orderBy('created_at', 'desc')->get();
-    return view('home', compact('banners','prices','galerias','profissionais','call_to_actions','diferenciais'));
+    // $prices = Preco::orderBy('created_at','desc')->get();
+    // $galerias = Galeria::orderBy('created_at', 'desc')->get();
+    // $profissionais = Profissionai::orderBy('created_at', 'desc')->get();
+    // $call_to_actions = CallToAction::orderBy('created_at', 'desc')->get();
+    // $diferenciais = Diferenciai::orderBy('created_at', 'desc')->get();
+    return view('home', compact('banners'));
 });
 
 Route::get('home', function () {
